@@ -1,0 +1,64 @@
+services:
+  # Backend API Service
+  - type: web
+    name: codexero-backend
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install --production
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DB_CONNECT_STRING
+        sync: false
+      - key: JWT_KEY
+        sync: false
+      - key: REDIS_PASS
+        sync: false
+      - key: JUDGE0_KEY
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: GEMINI_KEY
+        sync: false
+      - key: GEMINI_KEY2
+        sync: false
+      - key: GEMINI_KEY3
+        sync: false
+      - key: GEMINI_KEY4
+        sync: false
+      - key: GEMINI_KEY5
+        sync: false
+      - key: GEMINI_KEY6
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GITHUB_CLIENT_ID
+        sync: false
+      - key: GITHUB_CLIENT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        value: https://codexero-frontend.onrender.com
+      - key: CORS_ORIGIN
+        value: https://codexero-frontend.onrender.com
+
+  # Frontend Static Site
+  - type: web
+    name: codexero-frontend
+    env: static
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://codexero-backend.onrender.com
+      - key: VITE_SERVER_URL
+        value: https://codexero-backend.onrender.com

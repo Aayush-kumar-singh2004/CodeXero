@@ -1,0 +1,184 @@
+/* Chat Scrollbar */
+.dsa-chat-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.dsa-chat-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dsa-chat-scrollbar::-webkit-scrollbar-thumb {
+  background: #a5b4fc; /* Tailwind indigo-300 */
+  border-radius: 4px;
+}
+.dsa-chat-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #6366f1; /* Tailwind indigo-500 */
+}
+.dsa-chat-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #a5b4fc #f3f4f6;
+  overflow-y: scroll !important;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(8px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+body, .font-sans {
+  font-family: 'Inter', 'Helvetica', sans-serif;
+}
+
+/* Chat bubble tails */
+.chat-bubble-left {
+  position: relative;
+}
+.chat-bubble-left::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  bottom: 12px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid rgba(255,255,255,0.9);
+}
+.chat-bubble-right {
+  position: relative;
+}
+.chat-bubble-right::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: 12px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #2563eb;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-in {
+  animation: fade-in 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Monaco custom theme (for JS, Python, etc.) */
+.monaco-editor .vs-dark, .monaco-editor .vs {
+  border-radius: 12px;
+}
+
+/* Pulsing run button */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 #10b98144; }
+  50% { box-shadow: 0 0 0 8px #10b98122; }
+}
+.animate-pulse {
+  animation: pulse 1.2s infinite;
+}
+
+/* Expand/collapse animation for test case cards */
+@keyframes expand {
+  from { max-height: 0; opacity: 0; }
+  to { max-height: 500px; opacity: 1; }
+}
+.expand-enter {
+  animation: expand 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Custom scrollbar for chat and test case panes */
+.dsa-chat-scrollbar::-webkit-scrollbar, .custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  background: #e2e8f0;
+  border-radius: 8px;
+}
+.dsa-chat-scrollbar::-webkit-scrollbar-thumb, .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2563eb33;
+  border-radius: 8px;
+}
+
+/* Modern button styles */
+.modern-btn {
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 #2563eb11;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #2563eb;
+}
+.modern-btn.selected, .modern-btn:active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  transform: scale(1.05);
+}
+.modern-btn:hover {
+  background: #2563eb11;
+  color: #2563eb;
+}
+
+/* Chat bubble improvements */
+.chat-bubble-left, .chat-bubble-right {
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 #2563eb11;
+  font-size: 1.1rem;
+  padding: 1.5rem 2rem;
+}
+
+/* Subtle placeholder for diagram tool */
+.diagram-placeholder {
+  opacity: 0.6;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.7);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 0 #2563eb11;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+@media (max-width: 900px) {
+  .diagram-placeholder {
+    margin: 1rem;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Responsive panel padding */
+@media (max-width: 900px) {
+  .panel-padding {
+    padding: 1.5rem !important;
+  }
+}
+
+/* App.css */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.4);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.4);
+}
