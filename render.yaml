@@ -59,6 +59,6 @@ services:
     staticPublishPath: frontend/dist
     envVars:
       - key: VITE_API_URL
-        value: https://codexero-backend.onrender.com
+        value: https://codexero.onrender.com
       - key: VITE_SERVER_URL
-        value: https://codexero-backend.onrender.com
+        value: https://codexero.onrender.com
