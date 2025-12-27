@@ -2,6 +2,8 @@
 
 Welcome to the comprehensive guide for **CodeXero**, a cutting-edge full-stack coding platform designed for comprehensive interview preparation and algorithm mastery! This document provides complete technical documentation covering architecture, implementation details, and system functionality.
 
+[![Live Demo](https://img.shields.io/badge/Website-Live-brightgreen?style=for-the-badge&logo=google-chrome)](https://codexero-frontend.onrender.com)
+
 ## 🎯 Platform Overview
 
 **CodeXero** is a revolutionary coding interview preparation platform that combines:

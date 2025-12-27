@@ -7,8 +7,7 @@ const io = socketIo(server, {
   cors: {
     origin: [
       'http://localhost:5173', // ✅ Local frontend
-       'https://codexero-frontend.onrender.com',  // 🌍 Production frontend (deploy ke baad kaam aayega)
-
+      'https://codexero-frontend.onrender.com',  // 🌍 Production frontend (deploy ke baad kaam aayega)
       process.env.FRONTEND_URL
     ].filter(Boolean),
     methods: ["GET", "POST"],
@@ -45,10 +44,8 @@ const cors = require('cors')
 // Configure CORS origins from environment variables
 const allowedOrigins = [
     process.env.FRONTEND_URL || 'http://localhost:5173',
-       'http://localhost:5174', // For development
+    'http://localhost:5174', // For development
     'https://codexero-frontend.onrender.com', // Production frontend
-    
-
 ];
 
 // Add production origins if specified
@@ -153,7 +150,7 @@ const InitalizeConnection = async ()=>{
             console.log("Socket.IO enabled for multiplayer challenges");
             console.log("OAuth routes available at:");
             const baseUrl = process.env.NODE_ENV === 'production' //After deploy change to production 
-                ? `https://${process.env.DOMAIN || 'localhost'}`  // after deploy 'rebuild.services'
+                ? `https://${process.env.DOMAIN || 'codexero.services'}`  // after deploy 'codexero.services'
                 : `http://localhost:${process.env.PORT}`;
             console.log(`- ${baseUrl}/user/auth/test`);
             console.log(`- ${baseUrl}/user/auth/google`);
