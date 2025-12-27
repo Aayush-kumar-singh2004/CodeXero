@@ -7,7 +7,8 @@ const io = socketIo(server, {
   cors: {
     origin: [
       'http://localhost:5173', // ✅ Local frontend
-    //   'https://re-build-frontend.onrender.com',  // 🌍 Production frontend (deploy ke baad kaam aayega)
+       'https://codexero-frontend.onrender.com',  // 🌍 Production frontend (deploy ke baad kaam aayega)
+
       process.env.FRONTEND_URL
     ].filter(Boolean),
     methods: ["GET", "POST"],
@@ -44,8 +45,10 @@ const cors = require('cors')
 // Configure CORS origins from environment variables
 const allowedOrigins = [
     process.env.FRONTEND_URL || 'http://localhost:5173',
-    'http://localhost:5174', // For development
-    // 'https://re-build-frontend.onrender.com', // Production frontend
+       'http://localhost:5174', // For development
+    'https://codexero-frontend.onrender.com', // Production frontend
+    
+
 ];
 
 // Add production origins if specified

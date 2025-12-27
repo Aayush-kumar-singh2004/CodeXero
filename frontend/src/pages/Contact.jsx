@@ -99,7 +99,7 @@ function Contact() {
     {
       title: "Email Support",
       description: "Get help with technical issues or account questions",
-      contact: "support@codexer.dev",
+      contact: "support@codexero.dev",
       icon: "📧",
       responseTime: "Usually responds within 24 hours"
     },

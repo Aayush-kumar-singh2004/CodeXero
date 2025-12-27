@@ -1279,7 +1279,7 @@ function Footer() {
             <span className="text-xl font-bold text-white">CodeXero</span>
           </div>
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} CodeXer. All rights reserved.
+            &copy; {new Date().getFullYear()} CodeXero. All rights reserved.
           </p>
         </div>
 

@@ -1203,7 +1203,7 @@ const redisClient = createClient({
 ```bash
 # Backend Environment Variables
 PORT=3000
-DB_CONNECT_STRING=mongodb://localhost:27017/rezero
+DB_CONNECT_STRING=mongodb://localhost:27017/codexero
 JWT_KEY=your_secret_key
 REDIS_PASS=your_redis_password
 JUDGE0_KEY=your_judge0_api_key
