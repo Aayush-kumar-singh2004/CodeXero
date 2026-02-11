@@ -64,14 +64,15 @@ const submitBatch = async (submissions)=>{
 
 const options = {
   method: 'POST',
-  url: 'https://judge0-ce.p.rapidapi.com/submissions/batch',
-        
+  //url: 'https://judge0-ce.p.rapidapi.com/submissions/batch',
+    url: 'https://judge029.p.rapidapi.com/submissions/batch',     
   params: {
     base64_encoded: 'false'
   },
   headers: {
     'x-rapidapi-key': process.env.JUDGE0_KEY,
-    'x-rapidapi-host': 'judge0-ce.p.rapidapi.com',
+    //'x-rapidapi-host': 'judge0-ce.p.rapidapi.com',
+      'x-rapidapi-host': 'judge029.p.rapidapi.com',
     'Content-Type': 'application/json'
   },
   data: {
@@ -105,7 +106,8 @@ const submitToken = async(resultToken)=>{
 
 const options = {
   method: 'GET',
-  url: 'https://judge0-ce.p.rapidapi.com/submissions/batch',
+  //url: 'https://judge0-ce.p.rapidapi.com/submissions/batch',
+    url: 'https://judge029.p.rapidapi.com/submissions/batch',
   params: {
     tokens: resultToken.join(","),
     base64_encoded: 'false',
@@ -113,7 +115,8 @@ const options = {
   },
   headers: {
     'x-rapidapi-key': process.env.JUDGE0_KEY,
-    'x-rapidapi-host': 'judge0-ce.p.rapidapi.com'
+    //'x-rapidapi-host': 'judge0-ce.p.rapidapi.com'
+      'x-rapidapi-host': 'judge029.p.rapidapi.com',
   }
 };
 
