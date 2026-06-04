@@ -4,7 +4,7 @@
 This guide will help you deploy both your frontend and backend to Render with proper CORS configuration.
 
 ## URLs
-- **Frontend**: https://codexro-frontend.onrender.com
+- **Frontend**: https://codexero-frontend.onrender.com
 - **Backend**: https://codexero.onrender.com
 
 ## Deployment Steps
