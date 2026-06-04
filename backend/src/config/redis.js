@@ -5,6 +5,7 @@ const redisClient = createClient({
     socket: {
        host: 'redis-12622.crce300.ap-south-1-2.ec2.cloud.redislabs.com',
        
+       
         port: 12622
     }
 });
